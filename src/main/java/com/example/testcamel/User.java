@@ -6,7 +6,8 @@ public record User(
         String email,
         String username,
         String password,
+        String value__c,
         Long phone,
-        String city
+        int city
 ) {
 }

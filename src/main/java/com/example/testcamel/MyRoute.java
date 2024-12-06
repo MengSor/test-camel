@@ -22,7 +22,7 @@ public class MyRoute extends RouteBuilder {
 
         restConfiguration()
                 .component("servlet")
-                .contextPath("/api")
+//                .contextPath("/api/*")
                 .apiContextPath("/api-docs")
                 .apiContextRouteId("api-docs")
                 .apiProperty("api.title", openAPI.getInfo().getTitle())

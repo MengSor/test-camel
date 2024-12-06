@@ -1,9 +1,6 @@
 package com.example.testcamel;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,7 +17,7 @@ public class UserController {
         return userRepository.getUser();
     }
     @PostMapping("")
-    public void save(User user){
+    public void save(@RequestBody User user){
         userRepository.save(user);
     }
 }

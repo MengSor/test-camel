@@ -33,10 +33,10 @@ public class UserService implements UserRepository{
 
     @Override
     public void save(User user) {
-        String sql = "insert into users (id,name,email,phone) values (?,?,?,?)";
+        String sql = "insert into users (id,name,email,value__c) values (?,?,?,?)";
         jdbcClient
                 .sql(sql)
-                .params(List.of(user.id(),user.name(),user.email(),user.phone()))
+                .params(List.of(user.id(),user.name(),user.email(),user.value__c()))
                 .update();
     }
 }
